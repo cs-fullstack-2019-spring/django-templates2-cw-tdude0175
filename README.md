@@ -8,11 +8,11 @@ Template inheritance in Django
 * The 3rd column should contain the hyperlink ```Movie Synopsis``` with the url generated using the movie's position in the array (e.g. http://localhost:8000:movie_synopsis/2).
 * Using ```movie_details.html``` with a block named ```content``` that will display the movie title, and movie details for the selected movie.
 * Using ```movie_synopsis.html``` with a block named ```content``` that will display the movie title, and movie synopsis for the selected movie.
-* Create an ennpoints that will route to the details and synopsis views that display the appropriate entry.
+* Create an endpoints that will route to the details and synopsis views that display the appropriate entry.
 
 Data for entries:
 ```
-[
+movies = [
   {
     'movie_title': 'Star Wars',
     'movie_synopsis': 'The Imperial Forces, under orders from cruel Darth Vader, hold Princess Leia hostage in their efforts to quell the rebellion against the Galactic Empire. Luke Skywalker and Han Solo, captain of the Millennium Falcon, work together with the companionable droid duo R2-D2 and C-3PO to rescue the beautiful princess, help the Rebel Alliance and restore freedom and justice to the Galaxy.',
