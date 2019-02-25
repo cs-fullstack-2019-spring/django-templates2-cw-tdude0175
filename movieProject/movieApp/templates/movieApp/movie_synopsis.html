@@ -1,0 +1,23 @@
+{% extends 'movieApp/movies.html' %}
+
+<!--adds some distinction between pages with title-->
+{% block title %}
+{{movie.movie_title}} Synopsis
+{% endblock title %}
+
+
+<!--this block displays some content for view to make the page less empty-->
+{% block subtitle %}
+{{movie.movie_title}}
+<br>
+Synopsis
+{% endblock subtitle %}
+
+
+<!--this displays the content for the page and adds a link back-->
+{% block content %}
+<h4>
+    {{movie.movie_synopsis}}
+</h4> <br>
+<a href="{% url 'index' %}">Go Baack</a>
+{% endblock content %}

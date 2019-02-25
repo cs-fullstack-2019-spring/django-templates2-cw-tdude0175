@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Home
+        {% endblock title %}
+    </title>
+</head>
+<body>
+<h1>My Movies Page</h1>
+<h2>
+    {% block subtitle %}
+
+    {% endblock subtitle %}
+</h2>
+{% block content %}
+<table>
+    <!--first column = movie name,
+    second column = hyperlink to movie details ,
+    third column =  hyperlink to movie synopsis.
+    -->
+    <tr>
+        <!--this is the only static spot on the page so it's hard coded for easy-->
+        <th>Name</th>
+        <th>Details</th>
+        <th>Synopsis</th>
+    </tr>
+    {% for movie in movieList %}
+    <!--this adds all movies into the list without having to rewrite it in the case of a new movie added-->
+    <tr>
+        <td>{{movie.movie_title}}</td>
+        <td><a href="{% url 'detailDisplay' movie.movie_id %}">Details</a></td>
+        <td><a href="{% url 'synopsisDisplay' movie.movie_id %}">Synopsis</a></td>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock content %}
+</body>
+</html>

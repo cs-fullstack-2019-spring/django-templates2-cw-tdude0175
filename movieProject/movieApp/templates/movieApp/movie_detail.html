@@ -1,0 +1,20 @@
+{% extends 'movieApp/movies.html' %}
+<!--this page and synopsis do basically the same thing-->
+{% block title %}
+{{movie.movie_title}} Details
+{% endblock title %}
+
+<!--use block to replace content from the index to save time and memeory-->
+{% block subtitle %}
+{{movie.movie_title}}
+<br>
+Details
+{% endblock subtitle %}
+
+{% block content %}
+<h4>
+    {{movie.movie_details}}
+</h4>
+<br>
+<a href="{% url 'index' %}">Go baack</a>
+{% endblock content %}
